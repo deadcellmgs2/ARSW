@@ -67,10 +67,13 @@ public class Perfilador {
 			System.out.println(arreglo[i].getKey()+":"+arreglo[i].getValue() + (((Integer)arreglo[i].getValue()>1)?" Veces Probado":" Vez Probado"));
 		}
 		System.out.println("\nTiempo Total:"+((double)sumt/1000)+" Segundos");
-	   } catch (Exception e) {
-		// TODO Auto-generated catch block
-		 System.out.println(e.getMessage());
-	   }
+	   } catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("La clase no se ha encontrado");
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
 	   
 	}
 /**
