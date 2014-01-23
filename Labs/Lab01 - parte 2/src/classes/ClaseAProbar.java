@@ -10,7 +10,7 @@ import annotations.Perfilable;
 
 public class ClaseAProbar {
 
-	@Perfilable
+	@Perfilable(pruebas=5)
 	public void metodoUno(){
 		try {
 			Thread.sleep(new Random().nextInt(3000));
@@ -19,7 +19,7 @@ public class ClaseAProbar {
 		}		
 	}
 
-	@Perfilable
+	@Perfilable(pruebas=3)
 	public void metodoDos(){
 		try {
 			Thread.sleep(1000);
@@ -29,14 +29,14 @@ public class ClaseAProbar {
 		
 	}
 
-	@Perfilable
+	@Perfilable(pruebas=3)
 	public void metodoTres(){
 			int x=0;
 			for (int i=0;i<99999999;i++){
 				x=x*x;
 			}
 	}
-	@Perfilable
+	@Perfilable(pruebas=8)
 	public void metodoCuatro(){
 		int x=0;
 		for (int i=0;i<99999999;i++){

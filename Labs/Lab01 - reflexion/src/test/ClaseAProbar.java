@@ -46,32 +46,15 @@ public class ClaseAProbar implements Perfilable{
 	@Override
 	public String[] getTesteableMethodName() {
 		// TODO Auto-generated method stub
-		Class clase=this.getClass();
-		
-		Method[] metodos=clase.getDeclaredMethods();
-		
-		
-		ArrayList<String> listado = new ArrayList<String>();
-		for (int i = 0; i < metodos.length; i++) {
-			if(metodos[i].getParameterTypes().length==0 && !(metodos[i].getName()=="getTestCount" 
-					|| metodos[i].getName()=="getTesteableMethodName")){
-				listado.add(metodos[i].getName());
-			}
-		}
-		String[] retorno = new String[listado.size()];
-		
-		listado.toArray(retorno);
-		return retorno;
+		String[] retorno={"metodoUno","metodoDos","metodoCuatro"};
+		return  retorno;
 	}
 
 	@Override
 	public int[] getTestCount() {
 		// TODO Auto-generated method stub
-		int[] ret= new int[this.getTesteableMethodName().length];
-		for (int i = 0; i < ret.length; i++) {
-			ret[i]=i+1;
-		}
-		return ret;
+		int[] retorno={10,2,15};
+		return retorno;
 	}
 
 
